@@ -25,7 +25,13 @@ object Gen extends App {
     "ShiftRegister4" -> (() => new hdl_bits.exercises.ShiftRegister4()),
     "Lfsr5" -> (() => new hdl_bits.exercises.Lfsr5()),
     "LFSR32" -> (() => new hdl_bits.exercises.LFSR32()),
-    "LUT" -> (() => new hdl_bits.exercises.LUT())
+    "LUT" -> (() => new hdl_bits.exercises.LUT()),
+    "Rule90" -> (() => new hdl_bits.exercises.Rule90()),
+    "GameOfLife" -> (() => new hdl_bits.exercises.GameOfLife()),
+    "SimpleFSM" -> (() => new hdl_bits.exercises.SimpleFSM()),
+    "FsmCombo" -> (() => new hdl_bits.exercises.FsmCombo()),
+    "Fsm3onehot" -> (() => new hdl_bits.exercises.Fsm3onehot()),
+    "Lemmings1" -> (() => new hdl_bits.exercises.Lemmings1())
   )
 
   if (args.length != 1 || !registry.contains(args(0))) {

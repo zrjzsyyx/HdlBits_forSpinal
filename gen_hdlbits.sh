@@ -47,6 +47,10 @@ fi
 
 echo -e "${GREEN}Generated: $VERILOG_FILE${NC}"
 
+# Rename Spinal-reserved port names for HDL Bits compatibility
+sed -i 's/\bout_sig\b/out/g' "$VERILOG_FILE"
+sed -i 's/\bin_sig\b/in/g'   "$VERILOG_FILE"
+
 if $DO_LINT; then
     echo -e "${CYAN}=== Running Verilator lint ===${NC}"
     verilator --lint-only -Wall "$VERILOG_FILE" \
