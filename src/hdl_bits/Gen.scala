@@ -31,7 +31,10 @@ object Gen extends App {
     "SimpleFSM" -> (() => new hdl_bits.exercises.SimpleFSM()),
     "FsmCombo" -> (() => new hdl_bits.exercises.FsmCombo()),
     "Fsm3onehot" -> (() => new hdl_bits.exercises.Fsm3onehot()),
-    "Lemmings1" -> (() => new hdl_bits.exercises.Lemmings1())
+    "Lemmings1" -> (() => new hdl_bits.exercises.Lemmings1()),
+    "Ps2Parser" -> (() => new hdl_bits.exercises.Ps2Parser()),
+    "SerialRx" -> (() => new hdl_bits.exercises.SerialRx()),
+    "SerialRxFsm" -> (() => new hdl_bits.exercises.SerialRxFsm())
   )
 
   if (args.length != 1 || !registry.contains(args(0))) {
