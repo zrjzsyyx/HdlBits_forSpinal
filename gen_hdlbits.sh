@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
-GEN_DIR="$PROJECT_ROOT/gen/hdl_bits"
+GEN_DIR="$PROJECT_ROOT/gen"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

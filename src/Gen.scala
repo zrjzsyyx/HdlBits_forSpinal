@@ -34,7 +34,9 @@ object Gen extends App {
     "Lemmings1" -> (() => new hdl_bits.exercises.Lemmings1()),
     "Ps2Parser" -> (() => new hdl_bits.exercises.Ps2Parser()),
     "SerialRx" -> (() => new hdl_bits.exercises.SerialRx()),
-    "SerialRxFsm" -> (() => new hdl_bits.exercises.SerialRxFsm())
+    "SerialRxFsm" -> (() => new hdl_bits.exercises.SerialRxFsm()),
+    "SerialRxParity" -> (() => new hdl_bits.exercises.SerialRxParity()),
+    "Hdlc" -> (() => new hdl_bits.exercises.Hdlc())
   )
 
   if (args.length != 1 || !registry.contains(args(0))) {
@@ -45,8 +47,8 @@ object Gen extends App {
 
   val name = args(0)
   println(s"Generating Verilog for: $name")
-  SpinalConfig(targetDirectory = "gen/hdl_bits").generateVerilog(
+  SpinalConfig(targetDirectory = "gen").generateVerilog(
     registry(name)()
   )
-  println(s"Done → gen/hdl_bits/top_module.v")
+  println(s"Done → gen/top_module.v")
 }
